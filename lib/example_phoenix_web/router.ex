@@ -7,5 +7,7 @@ defmodule ExamplePhoenixWeb.Router do
 
   scope "/api", ExamplePhoenixWeb do
     pipe_through :api
+
+    get "/products/:products/emails/:emails", ChallengeController, :path_parameters
   end
 end
